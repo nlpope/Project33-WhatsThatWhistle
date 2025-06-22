@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E8B2E07FB5100AC3637 /* AppDelegate.swift */; };
+		40C78E982E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E922E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld */; };
+		40C78E992E07FB5100AC3637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E932E07FB5100AC3637 /* SceneDelegate.swift */; };
+		40C78E9A2E07FB5100AC3637 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E942E07FB5100AC3637 /* HomeVC.swift */; };
+		40C78E9B2E07FB5100AC3637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8C2E07FB5100AC3637 /* Assets.xcassets */; };
+		40C78E9D2E07FB5100AC3637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8F2E07FB5100AC3637 /* LaunchScreen.storyboard */; };
+		40C78E9E2E07FB5100AC3637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E912E07FB5100AC3637 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		40C78E6E2E07FB1800AC3637 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,27 +37,17 @@
 		40C78E542E07FB1100AC3637 /* Project33-WhatsThatWhistle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project33-WhatsThatWhistle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C78E6D2E07FB1800AC3637 /* Project33-WhatsThatWhistleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project33-WhatsThatWhistleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C78E772E07FB1800AC3637 /* Project33-WhatsThatWhistleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project33-WhatsThatWhistleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C78E8B2E07FB5100AC3637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40C78E8C2E07FB5100AC3637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40C78E8D2E07FB5100AC3637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C78E8E2E07FB5100AC3637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40C78E902E07FB5100AC3637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40C78E932E07FB5100AC3637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		40C78E942E07FB5100AC3637 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		40C78E962E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project33_WhatsThatWhistle.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		40C78E7F2E07FB1800AC3637 /* Exceptions for "Project33-WhatsThatWhistle" folder in "Project33-WhatsThatWhistle" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 40C78E532E07FB1100AC3637 /* Project33-WhatsThatWhistle */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		40C78E562E07FB1100AC3637 /* Project33-WhatsThatWhistle */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				40C78E7F2E07FB1800AC3637 /* Exceptions for "Project33-WhatsThatWhistle" folder in "Project33-WhatsThatWhistle" target */,
-			);
-			path = "Project33-WhatsThatWhistle";
-			sourceTree = "<group>";
-		};
 		40C78E702E07FB1800AC3637 /* Project33-WhatsThatWhistleTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Project33-WhatsThatWhistleTests";
@@ -88,7 +88,7 @@
 		40C78E4B2E07FB1100AC3637 = {
 			isa = PBXGroup;
 			children = (
-				40C78E562E07FB1100AC3637 /* Project33-WhatsThatWhistle */,
+				40C78E952E07FB5100AC3637 /* Project33-WhatsThatWhistle */,
 				40C78E702E07FB1800AC3637 /* Project33-WhatsThatWhistleTests */,
 				40C78E7A2E07FB1800AC3637 /* Project33-WhatsThatWhistleUITests */,
 				40C78E552E07FB1100AC3637 /* Products */,
@@ -105,6 +105,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		40C78E952E07FB5100AC3637 /* Project33-WhatsThatWhistle */ = {
+			isa = PBXGroup;
+			children = (
+				40C78EA02E07FB7D00AC3637 /* Screens */,
+				40C78E9F2E07FB5E00AC3637 /* Support */,
+				40C78E8D2E07FB5100AC3637 /* Info.plist */,
+			);
+			path = "Project33-WhatsThatWhistle";
+			sourceTree = "<group>";
+		};
+		40C78E9F2E07FB5E00AC3637 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				40C78E8B2E07FB5100AC3637 /* AppDelegate.swift */,
+				40C78E932E07FB5100AC3637 /* SceneDelegate.swift */,
+				40C78E8C2E07FB5100AC3637 /* Assets.xcassets */,
+				40C78E8F2E07FB5100AC3637 /* LaunchScreen.storyboard */,
+				40C78E912E07FB5100AC3637 /* Main.storyboard */,
+				40C78E922E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		40C78EA02E07FB7D00AC3637 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				40C78E942E07FB5100AC3637 /* HomeVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +150,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				40C78E562E07FB1100AC3637 /* Project33-WhatsThatWhistle */,
 			);
 			name = "Project33-WhatsThatWhistle";
 			packageProductDependencies = (
@@ -225,6 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C78E9B2E07FB5100AC3637 /* Assets.xcassets in Resources */,
+				40C78E9D2E07FB5100AC3637 /* LaunchScreen.storyboard in Resources */,
+				40C78E9E2E07FB5100AC3637 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */,
+				40C78E982E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld in Sources */,
+				40C78E992E07FB5100AC3637 /* SceneDelegate.swift in Sources */,
+				40C78E9A2E07FB5100AC3637 /* HomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +315,25 @@
 			targetProxy = 40C78E782E07FB1800AC3637 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40C78E8F2E07FB5100AC3637 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C78E8E2E07FB5100AC3637 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		40C78E912E07FB5100AC3637 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C78E902E07FB5100AC3637 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		40C78E812E07FB1800AC3637 /* Debug */ = {
@@ -571,6 +625,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40C78E922E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40C78E962E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodel */,
+			);
+			currentVersion = 40C78E962E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodel */;
+			path = Project33_WhatsThatWhistle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 40C78E4C2E07FB1100AC3637 /* Project object */;
 }
