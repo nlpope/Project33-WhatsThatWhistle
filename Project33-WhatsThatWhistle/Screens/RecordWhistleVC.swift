@@ -5,7 +5,7 @@
 import UIKit
 import AVFoundation
 
-class RecordWhistleVC: UIViewController
+class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
 {
     var stackView: UIStackView!
     var recordButton: UIButton!
@@ -31,14 +31,14 @@ class RecordWhistleVC: UIViewController
     func configRecordingSession() async
     {
         recordingSession = AVAudioSession.sharedInstance()
-        // new
-        if await AVAudioApplication.requestRecordPermission() {
-            
-        } else {
-            
-        }
+        // new undepricated
+//        if await AVAudioApplication.requestRecordPermission() {
+//            
+//        } else {
+//            
+//        }
         
-        // old
+        // old depricated
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -80,17 +80,80 @@ class RecordWhistleVC: UIViewController
     func loadRecordingUI()
     {
         //main thread
-        
         //Present recording interface.
+        recordButton = UIButton()
+        recordButton.translatesAutoresizingMaskIntoConstraints = false
+        recordButton.setTitle("Tap to Record", for: .normal)
+        recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
+        recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
+        stackView.addArrangedSubview(recordButton)
     }
     
     
     func loadFailUI()
     {
         //main thread
-        
         // The user denies access. Present a message that indicates
         // that they can change their permission settings in the
         // Privacy & Security section of the Settings app.
+        let failLabel = UILabel()
+        failLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        failLabel.text = MessageKeys.failLabel
+        failLabel.numberOfLines = 0
+        
+        stackView.addArrangedSubview(failLabel)
+    }
+    
+    //-------------------------------------//
+    // MARK: - RECORDING THE WHISTLE
+    
+    @objc func recordTapped()
+    {
+        
+    }
+    
+    
+    class func getDocumentsDirectory() -> URL
+    {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        // use Finder to go to what's printed beneath after recording to ensure file writing works
+        print("documentsDirectoryPath = \(documentsDirectory)")
+        return documentsDirectory
+    }
+    
+    
+    class func getWhistleURL() -> URL
+    { return getDocumentsDirectory().appendingPathComponent(DirectoryKeys.whistle) }
+    
+    
+    func startRecording()
+    {
+        view.backgroundColor = UIColor(red: 0.6, green: 0, blue: 0, alpha: 1)
+        recordButton.setTitle("Tap to Stop", for: .normal)
+        
+        let audioURL = RecordWhistleVC.getWhistleURL()
+        print(audioURL.absoluteString)
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            whistleRecorder = try AVAudioRecorder(url: audioURL, settings: settings)
+            whistleRecorder.delegate = self
+            whistleRecorder.record()
+        } catch {
+            finishRecording(success: false)
+        }
+    }
+    
+    
+    func finishRecording(success: Bool)
+    {
+        
     }
 }

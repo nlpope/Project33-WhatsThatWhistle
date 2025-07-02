@@ -14,3 +14,13 @@ enum VideoKeys
     static let launchScreen = "launchscreen"
     static let playerLayerName = "PlayerLayerName"
 }
+
+enum MessageKeys
+{
+    static let failLabel = "Recording failed: please ensure the app has access to your microphone."
+}
+
+enum DirectoryKeys
+{
+    static let whistle = "Whistle.m4a"
+}
