@@ -16,6 +16,7 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     {
         super.viewDidLoad()
         configNavigation()
+        configRecordingSession()
     }
     
     //-------------------------------------//
@@ -28,17 +29,17 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     }
     
     
-    func configRecordingSession() async
+    func configRecordingSession()
     {
         recordingSession = AVAudioSession.sharedInstance()
-        // new undepricated
+        // not depricated
 //        if await AVAudioApplication.requestRecordPermission() {
 //            
 //        } else {
 //            
 //        }
         
-        // old depricated
+        // depricated
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -109,7 +110,11 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     
     @objc func recordTapped()
     {
-        
+        if whistleRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
     }
     
     
@@ -154,6 +159,32 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     
     func finishRecording(success: Bool)
     {
+        view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
+        whistleRecorder.stop()
+        whistleRecorder = nil
         
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped))
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            let ac = UIAlertController(title: "Recording failed", message: MessageKeys.recordingFailed, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    
+    
+    @objc func nextTapped()
+    {
+        
+    }
+    
+    //-------------------------------------//
+    // MARK: -
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool)
+    {
+        if !flag { finishRecording(success: false) }
     }
 }
