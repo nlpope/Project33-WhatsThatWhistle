@@ -19,41 +19,6 @@ class RecordWhistleVC: UIViewController
     }
     
     //-------------------------------------//
-    // MARK: - CONFIGURATION
-    
-    func configNavigation()
-    {
-        title = "Record your whistle"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Record", style: .plain, target: nil, action: nil)
-    }
-    
-    
-    func configRecordingSession() async
-    {
-        recordingSession = AVAudioSession.sharedInstance()
-        // new
-        if await AVAudioApplication.requestRecordPermission() {
-            
-        } else {
-            
-        }
-        
-        // old
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed { self.loadRecordingUI() }
-                    else { self.loadFailUI() }
-                }
-            }
-        } catch {
-            self.loadFailUI()
-        }
-    }
-    
-    //-------------------------------------//
     // MARK: - LOAD VIEWS
     
     override func loadView()
@@ -92,5 +57,40 @@ class RecordWhistleVC: UIViewController
         // The user denies access. Present a message that indicates
         // that they can change their permission settings in the
         // Privacy & Security section of the Settings app.
+    }
+    
+    //-------------------------------------//
+    // MARK: - CONFIGURATION
+    
+    func configNavigation()
+    {
+        title = "Record your whistle"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Record", style: .plain, target: nil, action: nil)
+    }
+    
+    
+    func configRecordingSession() async
+    {
+        recordingSession = AVAudioSession.sharedInstance()
+        // new
+        if await AVAudioApplication.requestRecordPermission() {
+            
+        } else {
+            
+        }
+        
+        // old
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed { self.loadRecordingUI() }
+                    else { self.loadFailUI() }
+                }
+            }
+        } catch {
+            self.loadFailUI()
+        }
     }
 }
