@@ -39,14 +39,7 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     func configRecordingSession()
     {
         recordingSession = AVAudioSession.sharedInstance()
-        // not depricated
-//        if await AVAudioApplication.requestRecordPermission() {
-//            
-//        } else {
-//            
-//        }
-        
-        // depricated
+
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -87,8 +80,6 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     
     func loadRecordingUI()
     {
-        //main thread
-        //Present recording interface.
         recordButton = UIButton()
         recordButton.translatesAutoresizingMaskIntoConstraints = false
         recordButton.setTitle("Tap to Record", for: .normal)
@@ -109,10 +100,6 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     
     func loadFailUI()
     {
-        //main thread
-        // The user denies access. Present a message that indicates
-        // that they can change their permission settings in the
-        // Privacy & Security section of the Settings app.
         let failLabel = UILabel()
         failLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         failLabel.text = MessageKeys.failLabel
