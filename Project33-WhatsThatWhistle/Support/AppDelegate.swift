@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
  >  = solution
  --------------------------
  * can't seem to find the m4a file from the recording
- >
+ > try launching in simulator post completion to see if this is present, but should be apparent when I get to playback section
  --------------------------
  *
  >
