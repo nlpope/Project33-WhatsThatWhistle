@@ -19,6 +19,7 @@
 		4050EFA72E09A29D00BA9D57 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFA62E09A29D00BA9D57 /* KeychainWrapper.swift */; };
 		4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */; };
 		4050EFB12E09B1A000BA9D57 /* RecordWhistleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */; };
+		40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */; };
 		40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E8B2E07FB5100AC3637 /* AppDelegate.swift */; };
 		40C78E982E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E922E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld */; };
 		40C78E992E07FB5100AC3637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E932E07FB5100AC3637 /* SceneDelegate.swift */; };
@@ -58,6 +59,7 @@
 		4050EFA62E09A29D00BA9D57 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
 		4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleVC.swift; sourceTree = "<group>"; };
+		40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreTableVC.swift; sourceTree = "<group>"; };
 		40C78E542E07FB1100AC3637 /* Project33-WhatsThatWhistle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project33-WhatsThatWhistle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C78E6D2E07FB1800AC3637 /* Project33-WhatsThatWhistleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project33-WhatsThatWhistleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C78E772E07FB1800AC3637 /* Project33-WhatsThatWhistleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project33-WhatsThatWhistleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 			children = (
 				40C78E942E07FB5100AC3637 /* HomeVC.swift */,
 				4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */,
+				40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				4050EFA72E09A29D00BA9D57 /* KeychainWrapper.swift in Sources */,
 				4050EFB12E09B1A000BA9D57 /* RecordWhistleVC.swift in Sources */,
 				4050EF942E09953D00BA9D57 /* AVPlayer+Ext.swift in Sources */,
+				40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */,
 				4050EF992E09966800BA9D57 /* PersistenceManager.swift in Sources */,
 				40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */,
 				4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */,
