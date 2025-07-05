@@ -4,7 +4,7 @@
 
 import UIKit
 
-enum Genres
+enum Genres: CaseIterable
 {
     case Unknown, Blues, Classical, Electronic, Jazz, Metal, Pop, Reggae, RnB, Rock, Soul
 }
@@ -39,8 +39,8 @@ class SelectGenreTableVC: UITableViewController
     // MARK: - TABLE VIEW DATA SOURCE METHODS
 
     override func numberOfSections(in tableView: UITableView) -> Int
-    { return 0 }
+    { return 1 }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    { return 0 }
+    { return Genres.allCases.count }
 }
