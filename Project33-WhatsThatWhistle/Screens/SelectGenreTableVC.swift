@@ -4,13 +4,16 @@
 
 import UIKit
 
-enum Genres: CaseIterable
-{
-    case Unknown, Blues, Classical, Electronic, Jazz, Metal, Pop, Reggae, RnB, Rock, Soul
-}
+//enum Genres: CaseIterable // protocol allows for us to access '.count' prop for #OfCells
+//{
+//    case Unknown, Blues, Classical, Electronic, Jazz, Metal, Pop, Reggae, RnB, Rock, Soul
+//}
 
 class SelectGenreTableVC: UITableViewController
-{    
+{
+    class var genres = ["Unknown", "Blues", "Classical", "Electronic", "Jazz", "Metal", "Pop", "Reggae", "RnB", "Rock", "Soul"]
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -40,5 +43,14 @@ class SelectGenreTableVC: UITableViewController
     { return 1 }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    { return Genres.allCases.count }
+    { return SelectGenreTableVC.genres.count }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = SelectGenreTableVC.genres[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
 }
