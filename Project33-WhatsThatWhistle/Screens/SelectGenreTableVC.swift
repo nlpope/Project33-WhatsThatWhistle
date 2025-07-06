@@ -10,9 +10,7 @@ enum Genres: CaseIterable
 }
 
 class SelectGenreTableVC: UITableViewController
-{
-//    static var genres = ["Unknown", "Blues", "Classical"]
-    
+{    
     override func viewDidLoad()
     {
         super.viewDidLoad()
