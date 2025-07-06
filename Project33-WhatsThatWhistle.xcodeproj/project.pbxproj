@@ -27,6 +27,7 @@
 		40C78E9B2E07FB5100AC3637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8C2E07FB5100AC3637 /* Assets.xcassets */; };
 		40C78E9D2E07FB5100AC3637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8F2E07FB5100AC3637 /* LaunchScreen.storyboard */; };
 		40C78E9E2E07FB5100AC3637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E912E07FB5100AC3637 /* Main.storyboard */; };
+		40E341CF2E1A754A0024236F /* AddCommentsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		40C78E932E07FB5100AC3637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		40C78E942E07FB5100AC3637 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		40C78E962E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project33_WhatsThatWhistle.xcdatamodel; sourceTree = "<group>"; };
+		40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -195,6 +197,7 @@
 				40C78E942E07FB5100AC3637 /* HomeVC.swift */,
 				4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */,
 				40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */,
+				40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				4050EF942E09953D00BA9D57 /* AVPlayer+Ext.swift in Sources */,
 				40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */,
 				4050EF992E09966800BA9D57 /* PersistenceManager.swift in Sources */,
+				40E341CF2E1A754A0024236F /* AddCommentsTableVC.swift in Sources */,
 				40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */,
 				4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */,
 				4050EF9F2E099B3400BA9D57 /* KeyboardHandler+Utils.swift in Sources */,

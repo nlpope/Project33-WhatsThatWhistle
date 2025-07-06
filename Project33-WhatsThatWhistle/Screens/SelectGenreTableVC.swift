@@ -11,7 +11,9 @@ import UIKit
 
 class SelectGenreTableVC: UITableViewController
 {
-    class var genres = ["Unknown", "Blues", "Classical", "Electronic", "Jazz", "Metal", "Pop", "Reggae", "RnB", "Rock", "Soul"]
+    static var genres = ["Unknown", "Blues", "Classical", "Electronic", "Jazz", "Metal", "Pop", "Reggae", "RnB", "Rock", "Soul"]
+    
+    class func sayHello(){print("hey")}
     
     
     override func viewDidLoad()
@@ -42,6 +44,7 @@ class SelectGenreTableVC: UITableViewController
     override func numberOfSections(in tableView: UITableView) -> Int
     { return 1 }
 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     { return SelectGenreTableVC.genres.count }
     
@@ -52,5 +55,16 @@ class SelectGenreTableVC: UITableViewController
         cell.textLabel?.text = SelectGenreTableVC.genres[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            let genre = cell.textLabel?.text ?? SelectGenreTableVC.genres[0]
+            let vc = AddCommentsTableVC()
+            vc.genre = genre
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
