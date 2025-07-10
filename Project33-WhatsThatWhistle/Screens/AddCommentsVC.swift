@@ -71,4 +71,14 @@ class AddCommentsVC: UIViewController, UITextViewDelegate
         
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    //-------------------------------------//
+    // MARK: - TEXT VIEW DELEGATE METHODS
+    
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if textView.text == placeHolder {
+            textView.text = ""
+        }
+    }
 }

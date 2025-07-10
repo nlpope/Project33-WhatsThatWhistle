@@ -20,10 +20,7 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     var playButton: UIButton!
     
     
-    override func loadView()
-    {
-        configUI()
-    }
+    override func loadView() { configUI() }
     
     
     override func viewDidLoad()
