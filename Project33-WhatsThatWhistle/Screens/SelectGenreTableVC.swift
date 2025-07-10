@@ -62,7 +62,7 @@ class SelectGenreTableVC: UITableViewController
     {
         if let cell = tableView.cellForRow(at: indexPath) {
             let genre = cell.textLabel?.text ?? SelectGenreTableVC.genres[0]
-            let vc = AddCommentsTableVC()
+            let vc = AddCommentsVC()
             vc.genre = genre
             navigationController?.pushViewController(vc, animated: true)
         }

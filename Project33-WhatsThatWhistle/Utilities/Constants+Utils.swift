@@ -26,3 +26,8 @@ enum DirectoryKeys
 {
     static let whistle = "Whistle.m4a"
 }
+
+enum PlaceHolderKeys
+{
+    static let comments = "If you have any additional comments that might help identify your tune, enter them here."
+}

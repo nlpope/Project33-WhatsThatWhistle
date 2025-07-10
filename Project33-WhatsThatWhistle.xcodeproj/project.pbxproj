@@ -20,6 +20,8 @@
 		4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */; };
 		4050EFB12E09B1A000BA9D57 /* RecordWhistleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */; };
 		40AAFD192E1F74F100261B36 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD182E1F74F100261B36 /* UIResponder+Ext.swift */; };
+		40AAFD1D2E1F782600261B36 /* AddCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD1C2E1F782600261B36 /* AddCommentsVC.swift */; };
+		40AAFD1F2E1F813600261B36 /* SubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD1E2E1F813600261B36 /* SubmitVC.swift */; };
 		40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */; };
 		40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E8B2E07FB5100AC3637 /* AppDelegate.swift */; };
 		40C78E982E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40C78E922E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld */; };
@@ -28,7 +30,6 @@
 		40C78E9B2E07FB5100AC3637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8C2E07FB5100AC3637 /* Assets.xcassets */; };
 		40C78E9D2E07FB5100AC3637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E8F2E07FB5100AC3637 /* LaunchScreen.storyboard */; };
 		40C78E9E2E07FB5100AC3637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C78E912E07FB5100AC3637 /* Main.storyboard */; };
-		40E341CF2E1A754A0024236F /* AddCommentsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
 		4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleVC.swift; sourceTree = "<group>"; };
 		40AAFD182E1F74F100261B36 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
+		40AAFD1C2E1F782600261B36 /* AddCommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsVC.swift; sourceTree = "<group>"; };
+		40AAFD1E2E1F813600261B36 /* SubmitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitVC.swift; sourceTree = "<group>"; };
 		40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreTableVC.swift; sourceTree = "<group>"; };
 		40C78E542E07FB1100AC3637 /* Project33-WhatsThatWhistle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project33-WhatsThatWhistle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C78E6D2E07FB1800AC3637 /* Project33-WhatsThatWhistleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project33-WhatsThatWhistleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +77,6 @@
 		40C78E932E07FB5100AC3637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		40C78E942E07FB5100AC3637 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		40C78E962E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project33_WhatsThatWhistle.xcdatamodel; sourceTree = "<group>"; };
-		40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -200,7 +202,8 @@
 				40C78E942E07FB5100AC3637 /* HomeVC.swift */,
 				4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */,
 				40C472312E1931ED00D6F86F /* SelectGenreTableVC.swift */,
-				40E341CE2E1A754A0024236F /* AddCommentsTableVC.swift */,
+				40AAFD1C2E1F782600261B36 /* AddCommentsVC.swift */,
+				40AAFD1E2E1F813600261B36 /* SubmitVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -357,8 +360,8 @@
 				4050EF942E09953D00BA9D57 /* AVPlayer+Ext.swift in Sources */,
 				40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */,
 				4050EF992E09966800BA9D57 /* PersistenceManager.swift in Sources */,
-				40E341CF2E1A754A0024236F /* AddCommentsTableVC.swift in Sources */,
 				40C78E972E07FB5100AC3637 /* AppDelegate.swift in Sources */,
+				40AAFD1F2E1F813600261B36 /* SubmitVC.swift in Sources */,
 				4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */,
 				4050EF9F2E099B3400BA9D57 /* UIViewController+Ext.swift in Sources */,
 				40C78E982E07FB5100AC3637 /* Project33_WhatsThatWhistle.xcdatamodeld in Sources */,
@@ -368,6 +371,7 @@
 				4050EF9B2E099A3700BA9D57 /* WWError+Utils.swift in Sources */,
 				40C78E9A2E07FB5100AC3637 /* HomeVC.swift in Sources */,
 				4050EFA32E09A1BB00BA9D57 /* UIAlertController+Ext.swift in Sources */,
+				40AAFD1D2E1F782600261B36 /* AddCommentsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

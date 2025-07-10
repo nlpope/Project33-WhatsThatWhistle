@@ -19,6 +19,13 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     var whistlePlayer: AVAudioPlayer!
     var playButton: UIButton!
     
+    
+    override func loadView()
+    {
+        configUI()
+    }
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -54,10 +61,8 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
         }
     }
     
-    //-------------------------------------//
-    // MARK: - LOADING UIs
     
-    override func loadView()
+    func configUI()
     {
         view = UIView()
         view.backgroundColor = UIColor.gray
@@ -77,6 +82,8 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
         ])
     }
     
+    //-------------------------------------//
+    // MARK: - LOADING UIs
     
     func loadRecordingUI()
     {
@@ -122,6 +129,10 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     }
     
     
+    class func getWhistleURL() -> URL
+    { return getDocumentsDirectory().appendingPathComponent(DirectoryKeys.whistle) }
+    
+    
     class func getDocumentsDirectory() -> URL
     {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -130,10 +141,6 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
         print("documentsDirectoryPath = \(documentsDirectory)")
         return documentsDirectory
     }
-    
-    
-    class func getWhistleURL() -> URL
-    { return getDocumentsDirectory().appendingPathComponent(DirectoryKeys.whistle) }
     
     
     func startRecording()
@@ -210,6 +217,7 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     {
         let vc = SelectGenreTableVC()
         navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     //-------------------------------------//
