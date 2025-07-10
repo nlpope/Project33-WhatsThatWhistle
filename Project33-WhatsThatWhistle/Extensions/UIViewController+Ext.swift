@@ -1,4 +1,4 @@
-//  File: KeyboardHandler+Utils.swift
+//  File: UIViewController+Ext.swift
 //  Project: Project33-WhatsThatWhistle
 //  Created by: Noah Pope on 6/23/25.
 
@@ -36,28 +36,4 @@ extension UIViewController
     
     
     @objc func keyboardWillHide(sender: NSNotification) { view.frame.origin.y = 0 }
-}
-
-
-extension UIResponder
-{
-    private struct Static
-    {
-        static weak var responder: UIResponder?
-    }
-    
-    
-    // determines which element onscreen triggered the keyboard
-    static func currentResponder() -> UIResponder?
-    {
-        Static.responder = nil
-        UIApplication.shared.sendAction(#selector(UIResponder._trap),
-                                        to: nil,
-                                        from: nil,
-                                        for: nil)
-        return Static.responder
-    }
-    
-    
-    @objc private func _trap() { Static.responder = self }
 }
