@@ -23,7 +23,7 @@ class SubmitVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        configNavigation()
     }
     
     //-------------------------------------//
@@ -63,5 +63,12 @@ class SubmitVC: UIViewController
         
         stackView.addArrangedSubview(status)
         stackView.addArrangedSubview(spinner)
+    }
+    
+    
+    func configNavigation()
+    {
+        title = "You're all set!"
+        navigationItem.hidesBackButton = true
     }
 }
