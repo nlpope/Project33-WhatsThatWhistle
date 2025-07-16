@@ -17,9 +17,10 @@ enum VideoKeys
 
 enum MessageKeys
 {
-    static let failLabel = "Recording failed: please ensure the app has access to your microphone."
+    static let micAccessFail = "Recording failed: please ensure the app has access to your microphone."
     static let recordingFail = "There was a problem recording your whistle; please try again."
     static let playbackFail = "There was a problem playing your whistle; please try re-recording."
+    static let fetchFail = "There was a problem fethcing the list of whistles; please try again"
 }
 
 enum DirectoryKeys

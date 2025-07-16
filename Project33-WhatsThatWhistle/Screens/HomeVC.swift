@@ -68,6 +68,8 @@ class HomeVC: UITableViewController
     
     func loadWhistles()
     {
+        // cloudkit pt1
+        
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "creationDate", ascending: false)
         
@@ -80,7 +82,33 @@ class HomeVC: UITableViewController
         
         var newWhistles = [WWWhistle]()
         
-        #warning("add more here")
+        // cloudkit pt2
+        #warning("un-depricated method won't read recordID. WHY?")
+        operation.recordFetchedBlock = { record in
+            let whistle = WWWhistle()
+            whistle.recordID = record.recordID
+            whistle.genre = record["genre"]
+            whistle.comments = record["comments"]
+            newWhistles.append(whistle)
+        }
+        
+        // cloudkit pt3
+        
+        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    HomeVC.isDirty = false
+                    self.whistles = newWhistles
+                    self.tableView.reloadData()
+                } else {
+                    let ac = UIAlertController(title: "Fetch failed", message: "\(MessageKeys.fetchFail):\(error!)", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(ac, animated: true)
+                }
+            }
+        }
+        
+        // cloudkit pt4
     }
     
     //-------------------------------------//

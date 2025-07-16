@@ -106,7 +106,7 @@ class RecordWhistleVC: UIViewController, AVAudioRecorderDelegate
     {
         let failLabel = UILabel()
         failLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        failLabel.text = MessageKeys.failLabel
+        failLabel.text = MessageKeys.micAccessFail
         failLabel.numberOfLines = 0
         
         stackView.addArrangedSubview(failLabel)
