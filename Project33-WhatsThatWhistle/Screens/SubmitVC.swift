@@ -16,7 +16,7 @@ class SubmitVC: UIViewController
     var status: UILabel!
     var spinner: UIActivityIndicatorView!
     
-    
+    #warning("why configing ui in loadView & not VDL?")
     override func loadView() { configUI() }
     
     
