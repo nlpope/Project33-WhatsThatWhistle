@@ -19,6 +19,7 @@
 		4050EFA72E09A29D00BA9D57 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFA62E09A29D00BA9D57 /* KeychainWrapper.swift */; };
 		4050EFA92E09A2C700BA9D57 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */; };
 		4050EFB12E09B1A000BA9D57 /* RecordWhistleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */; };
+		405FA0A12E275D3F00070BC4 /* WWWhistle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FA0A02E275D3F00070BC4 /* WWWhistle.swift */; };
 		40AAFD192E1F74F100261B36 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD182E1F74F100261B36 /* UIResponder+Ext.swift */; };
 		40AAFD1D2E1F782600261B36 /* AddCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD1C2E1F782600261B36 /* AddCommentsVC.swift */; };
 		40AAFD1F2E1F813600261B36 /* SubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AAFD1E2E1F813600261B36 /* SubmitVC.swift */; };
@@ -62,6 +63,8 @@
 		4050EFA62E09A29D00BA9D57 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		4050EFA82E09A2C700BA9D57 /* KeychainOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
 		4050EFB02E09B1A000BA9D57 /* RecordWhistleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleVC.swift; sourceTree = "<group>"; };
+		405FA09E2E27436300070BC4 /* Project33-WhatsThatWhistle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project33-WhatsThatWhistle.entitlements"; sourceTree = "<group>"; };
+		405FA0A02E275D3F00070BC4 /* WWWhistle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWhistle.swift; sourceTree = "<group>"; };
 		40AAFD182E1F74F100261B36 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
 		40AAFD1C2E1F782600261B36 /* AddCommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsVC.swift; sourceTree = "<group>"; };
 		40AAFD1E2E1F813600261B36 /* SubmitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitVC.swift; sourceTree = "<group>"; };
@@ -147,6 +150,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		405FA09F2E275CFF00070BC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				405FA0A02E275D3F00070BC4 /* WWWhistle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		40C78E4B2E07FB1100AC3637 = {
 			isa = PBXGroup;
 			children = (
@@ -170,9 +181,11 @@
 		40C78E952E07FB5100AC3637 /* Project33-WhatsThatWhistle */ = {
 			isa = PBXGroup;
 			children = (
+				405FA09E2E27436300070BC4 /* Project33-WhatsThatWhistle.entitlements */,
 				4050EF972E09965A00BA9D57 /* Managers */,
 				4050EF922E09951500BA9D57 /* Extensions */,
 				4050EF8F2E0994CB00BA9D57 /* Utilities */,
+				405FA09F2E275CFF00070BC4 /* Models */,
 				40C78EA02E07FB7D00AC3637 /* Screens */,
 				40C78E9F2E07FB5E00AC3637 /* Support */,
 				40C78E8D2E07FB5100AC3637 /* Info.plist */,
@@ -357,6 +370,7 @@
 				4050EF962E09956800BA9D57 /* Constants+Utils.swift in Sources */,
 				4050EFA72E09A29D00BA9D57 /* KeychainWrapper.swift in Sources */,
 				4050EFB12E09B1A000BA9D57 /* RecordWhistleVC.swift in Sources */,
+				405FA0A12E275D3F00070BC4 /* WWWhistle.swift in Sources */,
 				4050EF942E09953D00BA9D57 /* AVPlayer+Ext.swift in Sources */,
 				40C472322E1931ED00D6F86F /* SelectGenreTableVC.swift in Sources */,
 				4050EF992E09966800BA9D57 /* PersistenceManager.swift in Sources */,
@@ -429,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Project33-WhatsThatWhistle/Project33-WhatsThatWhistle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9MT23QW7V;
@@ -457,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Project33-WhatsThatWhistle/Project33-WhatsThatWhistle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9MT23QW7V;

@@ -79,18 +79,14 @@ class WWLogoLauncher
     {
         targetVC.navigationController?.isNavigationBarHidden = false
         targetVC.view.backgroundColor = .systemBackground
-        //        if #available(iOS 18.0, *) {
-        //            targetVC.tabBarController?.isTabBarHidden = false
-        //        } else {
-        //            print("can't hide tabbar")
-        //        }
-        // MAYBE LOOK INTO TINKERING W THE Z-AXIS VALUE FOR THINGS LIKE BROWSERS & SEARCHBARS CALLED EARLIER IN THE VDL
         
         PersistenceManager.isFirstVisitAfterDismissal = false
         removeAllAVPlayerLayers()
         
-        // targetVC.config nav, table views, etc. then fetch relevant Info
-        
+        if let indexPath = targetVC.tableView.indexPathForSelectedRow {
+            targetVC.tableView.deselectRow(at: indexPath, animated: true)
+        }
+        if HomeVC.isDirty { targetVC.loadWhistles() }
     }
     
     
