@@ -72,8 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
  > try launching in simulator post completion to see if this is present, but should be apparent when I get to playback section
  > unsuccessful but the file is successfully playing back so I will leave it be for now
  --------------------------
- *
- >
+ * replacement for depricated 'recordFetchedBlock method in HomeVC doesn't contain 'recordID' prop
+ > reading through documentation and maybe the name is the replaced value which means I'd have to change the type in the model
  --------------------------
  XXXXXXXXXXXXXXXXXXXXXXXX
  --------------------------
