@@ -69,7 +69,6 @@ class HomeVC: UITableViewController
     func loadWhistles()
     {
         // cloudkit pt1
-        
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "creationDate", ascending: false)
         
@@ -93,7 +92,6 @@ class HomeVC: UITableViewController
         }
         
         // cloudkit pt3
-        
         operation.queryCompletionBlock = { [unowned self] (cursor, error) in
             DispatchQueue.main.async {
                 if error == nil {
@@ -109,6 +107,7 @@ class HomeVC: UITableViewController
         }
         
         // cloudkit pt4
+        CKContainer.default().publicCloudDatabase.add(operation)
     }
     
     //-------------------------------------//
