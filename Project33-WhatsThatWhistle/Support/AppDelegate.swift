@@ -74,6 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
  --------------------------
  * replacement for depricated 'recordFetchedBlock method in HomeVC doesn't contain 'recordID' prop
  > reading through documentation and maybe the name is the replaced value which means I'd have to change the type in the model
+ 
+ *having trouble with another deprecated method in the same file as well. will look into this.
  --------------------------
  XXXXXXXXXXXXXXXXXXXXXXXX
  --------------------------
